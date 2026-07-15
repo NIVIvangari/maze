@@ -201,67 +201,6 @@ function level2 () {
             . f d d d d f . 
             . . f f f f . . 
             `, SpriteKind.Projectile)
-        tiles.placeOnTile(coin, value)
-        animation.runImageAnimation(
-        coin,
-        [img`
-            . . b b b b . . 
-            . b 5 5 5 5 b . 
-            b 5 d 3 3 d 5 b 
-            b 5 3 5 5 1 5 b 
-            c 5 3 5 5 1 d c 
-            c d d 1 1 d d c 
-            . f d d d d f . 
-            . . f f f f . . 
-            `,img`
-            . . b b b . . . 
-            . b 5 5 5 b . . 
-            b 5 d 3 d 5 b . 
-            b 5 3 5 1 5 b . 
-            c 5 3 5 1 d c . 
-            c 5 d 1 d d c . 
-            . f d d d f . . 
-            . . f f f . . . 
-            `,img`
-            . . . b b . . . 
-            . . b 5 5 b . . 
-            . b 5 d 1 5 b . 
-            . b 5 3 1 5 b . 
-            . c 5 3 1 d c . 
-            . c 5 1 d d c . 
-            . . f d d f . . 
-            . . . f f . . . 
-            `,img`
-            . . . b b . . . 
-            . . b 5 5 b . . 
-            . . b 1 1 b . . 
-            . . b 5 5 b . . 
-            . . b d d b . . 
-            . . c d d c . . 
-            . . c 3 3 c . . 
-            . . . f f . . . 
-            `,img`
-            . . . b b . . . 
-            . . b 5 5 b . . 
-            . b 5 1 d 5 b . 
-            . b 5 1 3 5 b . 
-            . c d 1 3 5 c . 
-            . c d d 1 5 c . 
-            . . f d d f . . 
-            . . . f f . . . 
-            `,img`
-            . . . b b b . . 
-            . . b 5 5 5 b . 
-            . b 5 d 3 d 5 b 
-            . b 5 1 5 3 5 b 
-            . c d 1 5 3 5 c 
-            . c d d 1 d 5 c 
-            . . f d d d f . 
-            . . . f f f . . 
-            `],
-        500,
-        true
-        )
     }
 }
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -541,7 +480,6 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
     1000,
     true
     )
-    game.gameOver(false)
 })
 let myEnemy: Sprite = null
 let coin: Sprite = null
